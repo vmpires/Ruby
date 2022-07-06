@@ -5,10 +5,10 @@ resposta = gets.chomp.to_i
 
 while jackpot != 0
     if resposta > jackpot
-        print 'Number is higher, try again: '
+        print 'Number is higher... Try again: '
         resposta = gets.chomp.to_i
     elsif resposta < jackpot
-        print 'Number is lower, try again: '
+        print 'Number is lower... Try again: '
         resposta = gets.chomp.to_i
     elsif resposta == jackpot
         puts 'JACKPOT!!'
