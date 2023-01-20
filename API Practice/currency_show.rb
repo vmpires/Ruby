@@ -11,12 +11,11 @@ def get_quotation(key)
     
     quotations = JSON.parse(response)
     dollar_buying_price = quotations["results"]["currencies"]["USD"]["buy"]
-    puts "O valor de 1 dólar em reais é R$ #{dollar_buying_price.round(2)}"
 end
 
 def interval(key, seconds)
     loop do
-        get_quotation(key)
+        puts "O valor de 1 dólar em reais é R$ #{get_quotation(key).round(2)}"
         sleep seconds
     end
 end
