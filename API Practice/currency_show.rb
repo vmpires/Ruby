@@ -15,7 +15,9 @@ end
 
 def interval(key, seconds)
     loop do
-        puts "#{Time.now.strftime("%H:%M:%S")} => O valor de 1 dólar em reais é R$ #{get_quotation(key).round(2)}"
+        quotation = get_quotation(key).round(2)
+        now = Time.now.strftime("%H:%M:%S")
+        puts "#{now} => O valor de 1 dólar em reais é R$ #{quotation}"
         sleep seconds
     end
 end
