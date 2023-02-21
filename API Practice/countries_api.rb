@@ -15,13 +15,13 @@ country = gets.chomp
 
 begin
     country_info = get_country(country)
-    pp "Nome: #{country_info['name']['nativeName'].values.first['official']}
-Moeda: #{country_info['currencies'].values.first['name']}
-Capital: #{country_info['capital'][0]}
-Região: #{country_info['subregion']}
-Língua: #{country_info['languages'].values.first}
-Área: #{country_info['area']}
-População: #{country_info['population']}"
+    puts "Nome: #{country_info['name']['nativeName'].values.first['official']}"
+    puts "Moeda: #{country_info['currencies'].values.first['name']}"
+    puts "Capital: #{country_info['capital'][0]}"
+    puts "Região: #{country_info['subregion']}"
+    puts "Língua: #{country_info['languages'].values.first}"
+    puts "Área: #{country_info['area']}"
+    puts "População: #{country_info['population']}"
     
 rescue => exception
     puts 'País não encontrado ou digitado incorretamente!'
